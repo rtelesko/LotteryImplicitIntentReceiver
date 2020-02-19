@@ -17,8 +17,14 @@
             </intent-filter>
 
             <intent-filter>
+                <!-- See for Intent Filter: https://developer.android.com/training/basics/intents/filters -->
                 <action android:name="android.intent.action.VIEW" />
+                <!-- Also include the DEFAULT category. This allows your app to respond to implicit intents -->
                 <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                BROWSABLE: It is required in order for the intent filter to be accessible from a web browser.
+                Without it, clicking a link in a browser cannot resolve to your app.
+                -->
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="http"/>
             </intent-filter>

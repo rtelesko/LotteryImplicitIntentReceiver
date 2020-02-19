@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
+        // Retrieve data this intent is operating on. This URI specifies the name of the data.
         Uri uri = intent.getData();
         if (uri != null) {
             String uri_string = getString(R.string.uri_label)
